@@ -40,6 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  background: var(--tertiary-lt);
 }
 
 main {
@@ -54,13 +55,33 @@ main {
   flex-wrap: wrap;
 }
 
+.contentWrap {
+  background: var(--amber50) !important;
+}
+
 .box {
-  border-radius: 3px;
+  border: 1px solid var(--gray300);
+  background: whitesmoke;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.2rem;
   box-shadow: 0px 2px 10px -10px var(--primary-dk);
-  border: 4px dashed var(--accent);
-  /* background: var(--white); */
+  /* margin: 0.5rem 0 0.25rem; */
+}
+
+.box:first-of-type {
+  margin-top: 0;
+}
+
+.box:last-of-type {
+  margin-bottom: 0;
 }
 
 main .topper h4:first-of-type {
   margin: 0;
+}
+
+.griddy {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }

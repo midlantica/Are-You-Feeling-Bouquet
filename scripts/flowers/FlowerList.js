@@ -11,7 +11,6 @@ const render = (flowersToRender) => {
   const nurseries = useNurseries()
   const distributors = useDistributors()
   const nurseryFlowers = useNurseryFlowers()
-  // const nurseryDistributors = useNurseryDistributors()
   const retailers = useRetailers()
   const flowers = useFlowers()
 
