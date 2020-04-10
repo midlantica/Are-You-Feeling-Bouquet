@@ -1,16 +1,17 @@
 import { useDistributors } from '../distributors/DistributorProvider.js'
+import { useNurseryFlowers } from '../nurseries/NurseryFlowerProvider.js'
 import { useNurseries } from '../nurseries/NurseryProvider.js'
 import { useRetailers } from '../retailers/RetailerProvider.js'
 import Flower from './Flower.js'
 import { useFlowers } from './FlowerProvider.js'
-import { useFlowerRetailers } from './FlowerRetailerProvider.js'
 
 const contentTarget = document.querySelector('.flowers')
 
 const render = (flowersToRender) => {
   const nurseries = useNurseries()
-  const distributor = useDistributors()
-  const flowerRetailers = useFlowerRetailers()
+  const distributors = useDistributors()
+  const nurseryFlowers = useNurseryFlowers()
+  // const nurseryDistributors = useNurseryDistributors()
   const retailers = useRetailers()
   const flowers = useFlowers()
 
@@ -24,26 +25,26 @@ const render = (flowersToRender) => {
       })
 
       // Find related distributor for the current flower
-      const foundDistributor = distributor.find((distributor) => {
+      const foundDistributor = distributors.find((distributor) => {
         return distributor.id === flowerObj.distributorId
       })
 
-      // ###################
-      // Find customer/[s] for the current flower
-      let filterFlowerRetailers = flowerRetailers.filter(
-        (fec) => fec.flowerId === flowerObj.id
+      // Find Retailer/[s] for the current flower
+      // FIRST FILTER
+      let foundRetailers = nurseryFlowers.filter(
+        (fr) => fr.flowerId === flowerObj.id
       )
 
-      filterFlowerRetailers = filterFlowerRetailers.map((ffr) => {
-        return flowers.find((flower) => flower.id === ffr.flowerId)
+      // THEN MAP
+      foundRetailers = foundRetailers.map((fr) => {
+        return retailers.find((retailer) => retailer.id === fr.retailerId)
       })
 
       return Flower(
-        flowerObj,
-        foundNurseries,
+        flowerObj, //
+        foundRetailers,
         foundDistributor,
-        foundLocation,
-        filterFlowerRetailers
+        foundNurseries
       )
     })
     .join('')

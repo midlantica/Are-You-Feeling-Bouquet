@@ -1,5 +1,5 @@
 import { useFlowers } from '../flowers/FlowerProvider.js'
-import { useFlowerRetailers } from '../flowers/FlowerRetailerProvider.js'
+import { useNurseryFlowers } from '../nurseries/NurseryFlowerProvider.js'
 // import Flower from '../flowers/Flower.js'
 import Retailer from './Retailer.js'
 import { useRetailers } from './RetailerProvider.js'
@@ -7,7 +7,7 @@ import { useRetailers } from './RetailerProvider.js'
 const contentTarget = document.querySelector('.retailers')
 
 const render = (retailersToRender) => {
-  const flowerRetailers = useFlowerRetailers()
+  const nurseryflowers = useNurseryFlowers()
   const retailers = useRetailers()
   const flowers = useFlowers()
 
@@ -21,15 +21,15 @@ const render = (retailersToRender) => {
       })
 
       // Find retailer/[s] for the current flower
-      let filterRetailersFlower = flowerRetailers.filter(
+      let nurseryFlower = nurseryflowers.filter(
         (fce) => fce.retailerId === retailerObj.id
       )
 
-      filterRetailersFlower = filterRetailersFlower.map((fce) => {
+      nurseryFlower = nurseryFlower.map((fce) => {
         return flowers.find((flower) => flower.id === fce.flowerId)
       })
 
-      return Retailer(retailerObj, filterRetailersFlower)
+      return Retailer(retailerObj, nurseryFlower)
     })
     .join('')
 }

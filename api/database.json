@@ -3,37 +3,27 @@
     {
       "id": 1,
       "name": "Rose",
-      "color": "red",
-      "retailerId": 1,
-      "distributorId": 1
+      "color": "red"
     },
     {
       "id": 2,
       "name": "Daisy",
-      "color": "yellow",
-      "retailerId": 1,
-      "distributorId": 1
+      "color": "yellow"
     },
     {
       "id": 3,
       "name": "Iris",
-      "color": "purple",
-      "retailerId": 1,
-      "distributorId": 1
+      "color": "purple"
     },
     {
       "id": 4,
       "name": "Poppy",
-      "color": "red",
-      "retailerId": 1,
-      "distributorId": 1
+      "color": "red"
     },
     {
       "id": 5,
       "name": "Sunflower",
-      "color": "yellow",
-      "retailerId": 1,
-      "distributorId": 1
+      "color": "yellow"
     }
   ],
   "retailers": [
@@ -133,31 +123,112 @@
       "state": "TN"
     }
   ],
-  "flowerRetailers": [
+  "nurseryFlowers": [
     {
       "id": 1,
-      "flowerId": 1,
-      "retailerId": 1
+      "nurseryId": 1,
+      "flowerId": 1
     },
     {
       "id": 2,
-      "flowerId": 2,
-      "retailerId": 2
+      "nurseryId": 2,
+      "flowerId": 2
     },
     {
       "id": 3,
-      "flowerId": 3,
-      "retailerId": 3
+      "nurseryId": 3,
+      "flowerId": 3
     },
     {
       "id": 4,
-      "flowerId": 4,
-      "retailerId": 4
+      "nurseryId": 4,
+      "flowerId": 4
     },
     {
       "id": 5,
-      "flowerId": 5,
-      "retailerId": 5
+      "nurseryId": 5,
+      "flowerId": 5
+    }
+  ],
+  "retailerDistributors": [
+    {
+      "id": 1,
+      "retailerId": 1,
+      "distributorId": 1
+    },
+    {
+      "id": 2,
+      "retailerId": 2,
+      "distributorId": 2
+    },
+    {
+      "id": 3,
+      "retailerId": 3,
+      "distributorId": 3
+    },
+    {
+      "id": 4,
+      "retailerId": 4,
+      "distributorId": 4
+    },
+    {
+      "id": 5,
+      "retailerId": 5,
+      "distributorId": 5
+    }
+  ],
+  "nurseryDistributors": [
+    {
+      "id": 1,
+      "nurseryId": 1,
+      "distributorId": 1
+    },
+    {
+      "id": 2,
+      "nurseryId": 2,
+      "distributorId": 2
+    },
+    {
+      "id": 3,
+      "nurseryId": 3,
+      "distributorId": 3
+    },
+    {
+      "id": 4,
+      "nurseryId": 4,
+      "distributorId": 4
+    },
+    {
+      "id": 5,
+      "nurseryId": 5,
+      "distributorId": 5
+    }
+  ],
+  "distributorNurseries": [
+    {
+      "id": 1,
+      "distributorId": 1,
+      "nurseryId": 1
+    },
+    {
+      "id": 2,
+      "distributorId": 2,
+      "nurseryId": 2
+    },
+    {
+      "id": 3,
+      "distributorId": 3,
+      "nurseryId": 3
+    },
+    {
+      "id": 4,
+      "distributorId": 4,
+      "nurseryId": 4
+    },
+    {
+      "id": 5,
+      "distributorId": 5,
+      "nurseryId": 5
     }
   ]
 }
