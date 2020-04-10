@@ -3,27 +3,37 @@
     {
       "id": 1,
       "name": "Rose",
-      "color": "red"
+      "color": "red",
+      "retailerId": 1,
+      "distributorId": 1
     },
     {
       "id": 2,
       "name": "Daisy",
-      "color": "yellow"
+      "color": "yellow",
+      "retailerId": 1,
+      "distributorId": 1
     },
     {
       "id": 3,
       "name": "Iris",
-      "color": "purple"
+      "color": "purple",
+      "retailerId": 1,
+      "distributorId": 1
     },
     {
       "id": 4,
       "name": "Poppy",
-      "color": "red"
+      "color": "red",
+      "retailerId": 1,
+      "distributorId": 1
     },
     {
       "id": 5,
       "name": "Sunflower",
-      "color": "yellow"
+      "color": "yellow",
+      "retailerId": 1,
+      "distributorId": 1
     }
   ],
   "retailers": [
@@ -121,6 +131,33 @@
       "address": "106 Harding Pl",
       "city": "Nashville",
       "state": "TN"
+    }
+  ],
+  "flowerRetailers": [
+    {
+      "id": 1,
+      "flowerId": 1,
+      "retailerId": 1
+    },
+    {
+      "id": 2,
+      "flowerId": 2,
+      "retailerId": 2
+    },
+    {
+      "id": 3,
+      "flowerId": 3,
+      "retailerId": 3
+    },
+    {
+      "id": 4,
+      "flowerId": 4,
+      "retailerId": 4
+    },
+    {
+      "id": 5,
+      "flowerId": 5,
+      "retailerId": 5
     }
   ]
 }
