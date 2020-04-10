@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @import './dh-common/_dh-main.css';
 @import './colors.css';
 @import './tyography.css';
@@ -5,6 +8,11 @@
 @import './buttons.css';
 @import './scrollbar.css';
 @import './dialog.css';
+
+:root {
+  --font-head: 'Lobster Two', cursive;
+  --font-copy: 'Noto Serif', serif;
+}
 
 a {
   color: var(--primary);
@@ -16,7 +24,7 @@ a:hover {
 }
 
 html {
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 body {
@@ -24,7 +32,6 @@ body {
   margin: 0;
   background: var(--white);
   font-family: var(--font-copy);
-  /* font-size: 3rem; */
 }
 
 .container {
@@ -36,7 +43,7 @@ body {
 }
 
 main {
-  padding: 1rem 0rem 1.5em;
+  padding: 1.75rem 0rem 1.75em;
   width: 90%;
 }
 
