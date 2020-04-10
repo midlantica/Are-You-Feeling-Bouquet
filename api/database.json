@@ -177,6 +177,58 @@
       "distributorId": 5
     }
   ],
+  "flowersRetailer": [
+    {
+      "id": 1,
+      "flowerId": 1,
+      "retailerId": 1
+    },
+    {
+      "id": 2,
+      "flowerId": 2,
+      "retailerId": 2
+    },
+    {
+      "id": 3,
+      "flowerId": 3,
+      "retailerId": 3
+    },
+    {
+      "id": 4,
+      "flowerId": 4,
+      "retailerId": 4
+    },
+    {
+      "id": 5,
+      "flowerId": 5,
+      "retailerId": 5
+    },
+    {
+      "id": 6,
+      "flowerId": 5,
+      "retailerId": 1
+    },
+    {
+      "id": 7,
+      "flowerId": 2,
+      "retailerId": 2
+    },
+    {
+      "id": 8,
+      "flowerId": 3,
+      "retailerId": 1
+    },
+    {
+      "id": 9,
+      "flowerId": 5,
+      "retailerId": 3
+    },
+    {
+      "id": 10,
+      "flowerId": 5,
+      "retailerId": 4
+    }
+  ],
   "nurseryDistributors": [
     {
       "id": 1,

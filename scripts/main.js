@@ -2,6 +2,7 @@ import { getDistributorNurseries } from './distributors/DistributorNurseriesProv
 import { getDistributors } from './distributors/DistributorProvider.js'
 import { FlowerList } from './flowers/FlowerList.js'
 import { getFlowers } from './flowers/FlowerProvider.js'
+import { getFlowersRetailer } from './flowers/FlowersRetailerProvider.js'
 import { getNurseryDistributors } from './nurseries/NurseryDistributorProvider.js'
 import { getNurseryFlowers } from './nurseries/NurseryFlowerProvider.js'
 import { getNurseries } from './nurseries/NurseryProvider.js'
@@ -17,5 +18,6 @@ getFlowers()
   .then(getDistributorNurseries)
   .then(getNurseryDistributors)
   .then(getRetailerDistributors)
+  .then(getFlowersRetailer)
   .then(FlowerList)
   .then(RetailerList)

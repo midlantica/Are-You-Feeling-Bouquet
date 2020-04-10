@@ -1,35 +1,34 @@
 import { useFlowers } from '../flowers/FlowerProvider.js'
-import { useNurseryFlowers } from '../nurseries/NurseryFlowerProvider.js'
-// import Flower from '../flowers/Flower.js'
+import { useFlowersRetailer } from '../flowers/FlowersRetailerProvider.js'
 import Retailer from './Retailer.js'
 import { useRetailers } from './RetailerProvider.js'
 
 const contentTarget = document.querySelector('.retailers')
 
 const render = (retailersToRender) => {
-  const nurseryflowers = useNurseryFlowers()
   const retailers = useRetailers()
   const flowers = useFlowers()
+  let flowersRetailer = useFlowersRetailer()
 
   // Setup Flower Retailers relationship
 
   contentTarget.innerHTML = retailersToRender
     .map((retailerObj) => {
       // Find related retailer for the current flower
-      const foundFlower = flowers.find((flower) => {
-        return flower.id === retailerObj.retailerId
+      const foundFlower = flowers.map((flower) => {
+        return flower.id === retailerObj.flowerId
       })
 
       // Find retailer/[s] for the current flower
-      let nurseryFlower = nurseryflowers.filter(
-        (fce) => fce.retailerId === retailerObj.id
+      let myRetailersFlowers = flowersRetailer.filter(
+        (myX) => myX.retailerId === retailerObj.id
       )
 
-      nurseryFlower = nurseryFlower.map((fce) => {
-        return flowers.find((flower) => flower.id === fce.flowerId)
+      myRetailersFlowers = myRetailersFlowers.map((myX) => {
+        return flowers.find((flower) => flower.id === myX.flowerId)
       })
 
-      return Retailer(retailerObj, nurseryFlower)
+      return Retailer(retailerObj, myRetailersFlowers)
     })
     .join('')
 }

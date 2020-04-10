@@ -1,14 +1,11 @@
 const Retailer = (retailerObj, flowerArray) => {
   return `
     <section class="retailer box">
-      <h4 class="retailer__name">${retailerObj.name}</h4>
-      <p>Retailers:</p>
+      <h5 class="retailer__name marTQ">${retailerObj.name}</h5>
+      <p><b>Flowers sold:</b></p>
       <ul>
         ${flowerArray
-          .map(
-            (flowerArray) =>
-              `<li>${flowerArray.firstName} ${flowerArray.lastName}</li>`
-          )
+          .map((flowerArray) => `<li>${flowerArray.name}</li>`)
           .join('')}
       </ul>
       </div>
