@@ -1,12 +1,11 @@
 const Flower = (flowerObj, retailerObj, distributorObj, nurseryObj) => {
   return `
     <section class="flower box marB0">
-
-      <h4 class="flower__name">${flowerObj.name}</h4>
-      <p class="flower__color">
-        <span class="flower--color">color:</span>
-        ${flowerObj.color}
-      </p>
+      <h5 class="flower__name">${flowerObj.name}</h5>
+      <h6 class="flower__color">
+        <span class="flower--color">Color:</span>
+        <span class="toCapitalize">${flowerObj.color}</span>
+      </h6>
     </section>
     `
 }
